@@ -1,10 +1,22 @@
+<p align="center">
+  <img src=".github/logo.svg" alt="interview-recall" width="560">
+</p>
+
+<p align="center"><b>Java 后端八股二轮复习 · 基于 JavaGuide · 按你的简历和项目出题</b></p>
+
+<p align="center">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT"></a>
+  <img src="https://img.shields.io/badge/Agent%20Skills-compatible-orange" alt="Agent Skills">
+  <img src="https://img.shields.io/badge/Claude%20Code%20%7C%20Codex%20%7C%20ChatGPT-supported-2563EB" alt="platforms">
+</p>
+
 # interview-recall：Java 后端八股二轮复习
 
 一轮看完八股，合上书还是说不出来？这个 skill 让 AI 当你的辅导老师兼模拟面试官，用 **JavaGuide** 带你走一遍"主动回忆"式的二轮复习：**你查资料、合上资料口述，AI 原样记下你的原话，指出错在哪，再顺着你的思路整理成一份能讲出口的答案。**
 
 适用于 Claude Code、Codex CLI、ChatGPT 桌面版；网页版 ChatGPT 也能用，但功能受限。
 
-## 它和"让 AI 出几道八股题"有什么不同
+## 🆚 它和"让 AI 出几道八股题"有什么不同
 
 | | 普通的 AI 出题 | interview-recall |
 |---|---|---|
@@ -16,7 +28,7 @@
 
 同一道题库题，不同人考的场景不同：同样是"分布式事务"，项目里用 Outbox 的人考本地消息表和双写一致，用 Seata 的人考 AT 模式和全局锁。
 
-## 工作流程
+## 🔄 工作流程
 
 ```
 配置 ─→ 审查简历和项目 ─→ 生成题目大纲 ─→ 出题 ─→ 你查资料、口述 ─→ 纠错 ─→ 口述版 ─→ 追问 ─→ 间隔复习
@@ -32,7 +44,7 @@
 
 想看实际效果，可以看 [assets/examples/example-question.md](assets/examples/example-question.md)，这是作者一道题的完整记录。
 
-## 准备
+## 🧰 准备
 
 1. **clone JavaGuide**。这个 skill 不附带 JavaGuide 的内容，需要你自己 clone 一份：
 
@@ -44,7 +56,7 @@
 3. **准备项目代码**（强烈建议）：有代码，AI 才能审查出真实做法和问题，出的题才贴近你的项目。只有描述也能用，但项目相关的结论会标"未对照实现"。
 4. **准备一个放笔记的目录**。
 
-## 安装
+## 📦 安装
 
 仓库根目录就是 skill 本身，直接 clone 到对应的 skills 目录即可。下面以个人全局安装为例；想只在某个笔记目录里用，就 clone 到那个目录下对应的位置。
 
@@ -85,7 +97,7 @@ Codex CLI 里输入 `$interview-recall` 调用。ChatGPT 桌面版里，先建�
 
 > 注：OpenAI 正在下线自定义 GPT（个人账号已经不能新建），所以这里用的是 Project，不是自定义 GPT。
 
-## 开始使用
+## 🚀 开始使用
 
 第一条消息这样写就行：
 
@@ -97,7 +109,7 @@ Codex CLI 里输入 `$interview-recall` 调用。ChatGPT 桌面版里，先建�
 
 AI 会依次：确认配置 → 审查简历和项目，给你看项目画像 → 生成大纲 → 出第一道题。出完题它会停下来，等你查完资料、合上资料，再用自己的话讲。打字或者贴语音转文字都可以。
 
-## 生成的笔记
+## 📝 生成的笔记
 
 ```
 笔记/
@@ -108,12 +120,13 @@ AI 会依次：确认配置 → 审查简历和项目，给你看项目画像 �
 └── ...
 ```
 
-## 文件说明
+## 🗂️ 文件说明
 
 ```
 interview-recall/
 ├── SKILL.md                    # 主流程
 ├── LICENSE
+├── .github/logo.svg            # README 用的 logo
 ├── agents/openai.yaml          # ChatGPT 桌面版的显示信息
 ├── references/
 │   ├── syllabus.md             # 标准题库：基于 JavaGuide，核心模块 + 可选模块
@@ -129,7 +142,7 @@ interview-recall/
 └── chatgpt/instructions.md     # ChatGPT 网页版 Project 用的指令
 ```
 
-## 常见问题
+## ❓ 常见问题
 
 **为什么固定用 JavaGuide，不能换别的资料？**
 固定资料，所有人的题目路径才能对齐，题库里每一题的出处也都核对过确实存在、有正文。JavaGuide 里只有付费简介、没有正文的页面，题库已经避开了；JavaGuide 没讲的知识点，会作为你的个人项目题追加，资料查官方文档。
@@ -143,17 +156,17 @@ interview-recall/
 **简历上写了，但代码里其实没做，会怎样？**
 审查时会被指出来，让你决定是改简历，还是自己补上实现。选了补实现的，相关题目会先只考通用知识，等你写完代码再考项目部分。
 
-## 给新用户的建议
+## 💡 给新用户的建议
 
 - **追问深度先选「面试高频」**：先把范围覆盖完，再对重点模块加深，比一开始就深挖更划算。
 - **口述时别怕说错**：原话越真实，纠错越有用。不确定就直接说"不确定"。
 - **一定要合上资料再讲**：边看边讲等于没练。
 
-## 许可证
+## 📄 许可证
 
 [MIT](LICENSE)。
 
-## 致谢
+## 🙏 致谢
 
 - 资料来自 [JavaGuide](https://github.com/Snailclimb/JavaGuide)（Apache 2.0），作者 Guide 及其贡献者。本 skill 只引用文件路径，不附带 JavaGuide 的内容。
 - skill 格式遵循 [Agent Skills](https://agentskills.io/specification) 开放规范。
