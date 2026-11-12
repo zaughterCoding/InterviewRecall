@@ -1,0 +1,4 @@
+interface:
+  display_name: "Java 后端八股二轮复习"
+  short_description: "基于 JavaGuide，按你的简历和项目出题、纠错、追问、间隔复习"
+  default_prompt: "开始复习。简历在 ./简历.md，项目代码在 ./项目目录，JavaGuide 在 ./JavaGuide，笔记放 ./笔记。"
