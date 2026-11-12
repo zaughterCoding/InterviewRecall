@@ -63,7 +63,7 @@
 ### Claude Code
 
 ```bash
-git clone <本仓库地址> ~/.claude/skills/interview-recall
+git clone https://github.com/zaughterCoding/InterviewRecall.git ~/.claude/skills/interview-recall
 ```
 
 也可以把整个文件夹复制到下面任一位置：
@@ -76,7 +76,7 @@ git clone <本仓库地址> ~/.claude/skills/interview-recall
 ### Codex CLI / ChatGPT 桌面版
 
 ```bash
-git clone <本仓库地址> ~/.agents/skills/interview-recall
+git clone https://github.com/zaughterCoding/InterviewRecall.git ~/.agents/skills/interview-recall
 ```
 
 也可以把整个文件夹复制到下面任一位置：
